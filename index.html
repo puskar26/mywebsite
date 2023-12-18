@@ -20,6 +20,11 @@
     />
   </head>
   <body>
+    <div class="loader-container">
+      <div class="loader">
+
+      </div>
+    </div>
     <header id="header">
       <nav id="navbar">
         <div class="logo">
@@ -53,8 +58,8 @@
           <div class="info">
             <p> I'm a <span class="web">Web Developer.</span><span class="programmer">Programmer. </span><span class="graphic"> Graphic Designer.</span>  </p>
              <div class="buttons">
-               <button>Download CV</button>
-               <button onclick="composeMail();">Send a Mail</button>
+               <button class="primary">Download CV</button>
+               <button class="secondary" onclick="composeMail();">Send a Mail</button>
              </div>
           </div>
         </div>
@@ -71,7 +76,8 @@
             I can't wait to seize new opportunities that will further my professional and intellectual development.
           </p>
           
-          <p>I'm thrilled about the numerous chances that working in these fields will present for me in the future, and I'm looking forward to the amazing experiences and challenges that lie ahead.</p></div></p>
+          <p>I'm thrilled about the numerous chances that working in these fields will present for me in the future, and I'm looking forward to the amazing experiences and challenges that lie ahead.</p>
+        </div>
         <div class="about-image"><img src="Images/1702822216800.webp" alt=""></div>
       </section>
       <section id="projects">
@@ -83,7 +89,7 @@
               <div class="background"></div>
               <div class="footer-text">
                 Basic JS Calculator
-                <button class="arrow">&rarr;</button>
+                <a href="calculator.html" target="_blank"><button class="arrow">&rarr;</button></a>
               </div>
             </div>
           </div>
@@ -93,7 +99,7 @@
               <div class="background"></div>
               <div class="footer-text">
                 Rock, Paper & Scissor
-                <button class="arrow">&rarr;</button>
+                <a href="Rps/rps_dom.html" target="_blank"><button class="arrow">&rarr;</button></a>
               </div>
             </div>
           </div>
@@ -103,7 +109,7 @@
               <div class="background"></div>
               <div class="footer-text">
                 Simple ToDo List
-                <button class="arrow">&rarr;</button>
+                <a href="todo.html" target="_blank"><button class="arrow">&rarr;</button></a>
               </div>
             </div>
           </div>
@@ -111,16 +117,15 @@
       
       </section>
       <section id="contact">
-        <img class="bg" src="Images/pngtree-technology-future-25d-isometric-gradient-background-5disometricgradientbackground-image_53995.webp" alt="">
         <div class="contact-title"><h3>Feedbacks ?</h3></div>
         <div class="contact-container">
             <div class="contact-form">
-              <form action="">
-               <input type="text" name="First Name" placeholder="First Name" >
-               <input type="text" name="Last Name" placeholder="Last Name" >
-               <input type="text" name="Email" placeholder="Email Address" >
-               <textarea name="" id="" cols="30" rows="10" name="Suggestion" placeholder="Feedback"></textarea>
-                <button>Submit</button>
+              <form action="https://formspree.io/f/mqkrzpob" method="post">
+               <input type="text" name="First Name" placeholder="First Name" required >
+               <input type="text" name="Last Name" placeholder="Last Name"  >
+               <input type="email" name="Email" placeholder="Email Address" required >
+               <textarea name="" id="" cols="30" rows="10" name="Suggestion" placeholder="Feedback" required></textarea>
+                <button type="submit">Submit</button>
               </form>
             </div>
             <div class="contact-image">
@@ -147,10 +152,10 @@
           </div>
         </div>
         <div class="footer-links">
-         <a href=""> <img src="Icons/facebook modern logo, famous global social network online service.svg" alt=""> </a> 
-         <a href=""> <img src="Icons/Instagram a popular social networking service with magic filters.svg" alt=""> </a>
-         <a href=""> <img src="Icons/Youtube offers videos and music and original content.svg" alt=""> </a>
-         <a href=""> <img src="" alt="">Linkedin </a>
+         <a href="https://www.facebook.com/royal.emperior.5" target="_blank"> <img src="Icons/facebook modern logo, famous global social network online service.svg" alt=""> </a> 
+         <a href="https://www.instagram.com/case___p" target="_blank"> <img src="Icons/Instagram a popular social networking service with magic filters.svg" alt=""> </a>
+         <a href="" target="_blank"> <img src="Icons/Youtube offers videos and music and original content.svg" alt=""> </a>
+         <a href="https://www.linkedin.com/in/pushkar-niraula-100b7728a/" target="_blank"> <img src="Icons/linkedin-seeklogo.com.svg" alt=""> </a>
         </div>
         <div class="copyright">
           &#169; copyright by pushkar niraula
@@ -178,11 +183,28 @@
 
     // Send to Mail Button
     function composeMail(){
-      var email = "puskarniraula01@gmail.com";
-       email = encodeURIComponent(email);
-       let gmailURL = "https://mail.google.com/mail/?view=cm&to=" + email ;
-       window.open(gmailURL, "_blank");
+           var email = "niraulapuskar77@gmail.com";
+        email = encodeURIComponent(email);
+        var gmailAppUrl = "googlegmail://co?to=" + email ;
+        var appTab = window.open(gmailAppUrl, '_blank');
+        if (!appTab || appTab.closed) {
+            var webTab = window.open("https://mail.google.com/mail/?view=cm&to=" + email +  '_blank');
+            if (!webTab || webTab.closed) {
+                window.location.href = "https://mail.google.com/mail/?view=cm&to=" + email ;
+            }
+        }
+
     }
+    function redirect(){
+      window.location.href = "redirect.html";
+    }
+
+    const loaderContainer = document.querySelector('.loader-container');
+    const pageContent =document.querySelector('#home')
+    window.addEventListener('load', ()=>{
+      loaderContainer.classList.add('hidden');
+      pageContent.classList.add('visible');
+    });
     </script>
   </body>
 </html>
