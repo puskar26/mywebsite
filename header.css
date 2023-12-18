@@ -11,7 +11,9 @@ justify-content:center;
 align-items: center;
 padding:0 15px;
 position: fixed;
-inset: 0 0 600px 0;
+top: 0;
+left: 0;
+width: 100%;
 z-index: 1000;
 box-shadow: 0 5px 25px rgba(0,0,0, 0.5);
 }
@@ -42,7 +44,7 @@ box-shadow: 0 5px 25px rgba(0,0,0, 0.5);
 .nav-items > a:hover{
   border-radius: 20px;
   color: white;
-  background-color: rgba(2, 60, 219, 0.909);
+  background-color: #6135f3;
 }
 .nav-items > a:active{
   border-radius: 20px;
@@ -67,11 +69,10 @@ box-shadow: 0 5px 25px rgba(0,0,0, 0.5);
   background-color:  rgba(242, 242, 242, 0.9);
   flex-direction: column;
 position: absolute;
+width: 100%;
 top: 70px;
-right: 0;
-left: 0;
 height:calc(100vh - 70px) ;
-gap: 10vh;
+gap: 1rem;
 padding-top: 20px;
 align-items: center;
 z-index: 100;
