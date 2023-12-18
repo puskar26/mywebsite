@@ -1,120 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pushkar Niraula</title>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="general.css" />
 
-    <link rel="icon" type="image/x-icon" href="Images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="first.css">
-</head>
 
-<body class="container">
-
-    <div class="hey">
-        <div id="main">
-            <div>
-                <h1>PORTFOLIO</h1>
-            </div>
-            <div class="soc">
-
-                <nav>
-                    <ul class="first">
-                        <li><a href="#main">Home</a></li>
-                        <li><a href="#info">About Me</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="#contact">Contact Me</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navbar">
+        <div class="logo">
+          <a href="#home"><img src="Icons/web-icon-removebg-preview.png" alt="Logo" /></a>
         </div>
-        <header id="main-header">
-            <div class="ph">
-                <div>
-                    <p>Hello! My name is </p>
-                    <h2>PUSKAR NIRAULA</h2>
-                    <p>I'm learning Web-Designing</p>
-                </div>
-                <div class="image">
-                </div>
 
-            </div>
-        </header>
-    </div>
-
-    <section>
-        <div id="info">
-            <div class="about">
-                <h3>ABOUT ME</h3>
-                <h4>WEB-DESIGNER</h4>
-                <p>Hi there! My name is Puskar and I am a high-schooler. I am passionate about programming, Graphic designing & web
-                    designing. I have always been interested in Web Design/Programming and Graphic Designing and
-                    have recently started learning more about it through online resources and projects of my own. I am
-                    excited to continue learning and growing as a Web Designer/Programmer/Graphic Designing Expert and to see
-                    where my interests take me in the future. In the meantime, I am always looking for new opportunities
-                    to challenge myself and gain valuable experience.</p>
-                <a href="#contact" class="btn">Let's talk</a>
-            </div>
-            <div class="blank"></div>
-
+        <div class="nav-items">
+          <a class="menu" href="#about">About</a>
+          <a class="menu" href="#projects">Projects</a>
+          <a class="menu" href="#contact">Contact</a>
         </div>
-    </section>
 
-    <section id="contact">
-        <div class="container small">
-            <div class="me">
-                <h3>CONTACT ME</h3>
-                <p class="new">Let's get in touch</p>
+        <div class="ham">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+          </span>
+        
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="image">
+          <img src="Images/1689859559894.webp" alt="">
+        </div>
+        <div class="text">
+          <div class="title">
+            <p>I'm </p>
+             <p> <span class="first">Pushkar</span> <span class="last">Niraula</span></p>
+          </div>
+          <div class="info">
+            <p> I'm a <span class="web">Web Developer.</span><span class="programmer">Programmer. </span><span class="graphic"> Graphic Designer.</span>  </p>
+             <div class="buttons">
+               <button>Download CV</button>
+               <button onclick="composeMail();">Send a Mail</button>
+             </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+
+        <div class="about-text">
+          <h1>About Me</h1>
+
+          <p>Hello there! I'm Pushkar, a dedicated student with a love for programming, graphic design, and web development. 
+          <p>
+            To enhance my comprehension in various domains, I have dived into an array of individual efforts and online materials to extend my perspectives. As I get closer to my first year of university, I'm excited to learn more about the domains of graphic and web
+            design.
+            I can't wait to seize new opportunities that will further my professional and intellectual development.
+          </p>
+          
+          <p>I'm thrilled about the numerous chances that working in these fields will present for me in the future, and I'm looking forward to the amazing experiences and challenges that lie ahead.</p></div></p>
+        <div class="about-image"><img src="Images/1702822216800.webp" alt=""></div>
+      </section>
+      <section id="projects">
+        <div class="project-title"> <h2>My Projects</h2> </div>
+        <div class="projects-description">
+          <div class="project-content" >
+            <img src="Images/Screen Shot 2023-12-18 at 10.14.32 AM.webp" alt="Calculator">
+            <div class="footer">
+              <div class="background"></div>
+              <div class="footer-text">
+                Basic JS Calculator
+                <button class="arrow">&rarr;</button>
+              </div>
             </div>
-            <form action="" method="post">
-                <div>
-                    <label for="name-form">Name</label>
-                    <input type="text" id="name-form">
-                </div>
-                <div>
-                    <label for="email-form">Email</label>
-                    <input type="email" id="email-form">
-                </div>
-                <div>
-                    <label for="mess-form">Feedback</label>
-                    <textarea name="Mess" id="form-mess" cols="30" rows="10"></textarea>
-                </div>
-                <div>
-                    <button class="but">SUBMIT</button>
-                </div>
-            </form>
+          </div>
+          <div class="project-content" >
+            <img src="Images/Screen Shot 2023-12-18 at 11.29.03 AM.webp" alt="Rock Paper Scissor">
+            <div class="footer">
+              <div class="background"></div>
+              <div class="footer-text">
+                Rock, Paper & Scissor
+                <button class="arrow">&rarr;</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-content" >
+            <img src="Images/Screen Shot 2023-12-18 at 12.13.05 PM.webp" alt="To-Do List">
+            <div class="footer">
+              <div class="background"></div>
+              <div class="footer-text">
+                Simple ToDo List
+                <button class="arrow">&rarr;</button>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <footer>
-        <div class="foot">
-            <p>Thank you for visiting my portfolio website. I hope you enjoy exploring my work and learning more about
-                me.If you want to know more about me then click on the links below to get to know me more:</p>
-            <ul class="social">
-                <li>
-                    <a href="https://www.facebook.com/royal.emperior.5"><img src="Images/icon-facebook.svg" alt=""></a>
-                </li>
-                <li><a href="https://www.instagram.com/pus_karr/"><img src="Images/icon-instagram.svg" alt=""></a></li>
-                <li class="yt"><a href="https://www.youtube.com/@SYSCOY"><img
-                            src="Images/YouTube-Icon-Almost-Black-Logo.wine.svg" width="28.01px" height="31.09px"
-                            alt=""></a></li>
-            </ul>
-
-
+      
+      </section>
+      <section id="contact">
+        <img class="bg" src="Images/pngtree-technology-future-25d-isometric-gradient-background-5disometricgradientbackground-image_53995.webp" alt="">
+        <div class="contact-title"><h3>Feedbacks ?</h3></div>
+        <div class="contact-container">
+            <div class="contact-form">
+              <form action="">
+               <input type="text" name="First Name" placeholder="First Name" >
+               <input type="text" name="Last Name" placeholder="Last Name" >
+               <input type="text" name="Email" placeholder="Email Address" >
+               <textarea name="" id="" cols="30" rows="10" name="Suggestion" placeholder="Feedback"></textarea>
+                <button>Submit</button>
+              </form>
+            </div>
+            <div class="contact-image">
+              <img src="Icons/undraw_drink_coffee_v3au.svg" alt="">
+            
+            <div class="contact-image-text">COFFEE TIME!!</div>
+          </div>
         </div>
-        <div class="container small">
-            <p class="last">&copy;Copyright by Puskar Niraula</p>
+      </section>
+    </main>
+      <footer id="footer">
+        <div class="footer-head">
+          <div class="links-text"> 
+            <h4>Thats it.</h4>
+            <p>
+              Thank you for visiting my portfolio website. I appreciate your time and interest in exploring my work. If you have any questions or would like to connect further, feel free to reach out through these links.</p>
+          </div>
+          <div class="link-image">
+            <img class="lock" src="Icons/Private access padlock for safety and guard.svg" alt="">
+            <div class="mobile-text">
+              www.pushkarniraula.com.np
+            </div>
+            <img src="Icons/undraw_mobile_search_jxq5.svg" alt="">
+          </div>
+        </div>
+        <div class="footer-links">
+         <a href=""> <img src="Icons/facebook modern logo, famous global social network online service.svg" alt=""> </a> 
+         <a href=""> <img src="Icons/Instagram a popular social networking service with magic filters.svg" alt=""> </a>
+         <a href=""> <img src="Icons/Youtube offers videos and music and original content.svg" alt=""> </a>
+         <a href=""> <img src="" alt="">Linkedin </a>
+        </div>
+        <div class="copyright">
+          &#169; copyright by pushkar niraula
         </div>
     </footer>
-</body>
 
+    <script>
+
+      //hamburger menu
+     let closeHam= document.querySelector('#closeHam');
+     let openHam= document.querySelector('#openHam');
+     let navItems=document.querySelector('.nav-items');
+
+     const hamburgerEvent = (open, close, navitem) =>{
+      closeHam.style.display = close;
+      openHam.style.display = open;
+      navItems.style.display = navitem;
+     }
+     openHam.addEventListener('click', ()=>{
+      hamburgerEvent("none", "block", "flex")
+     });
+     closeHam.addEventListener('click', ()=>{
+      hamburgerEvent("block", "none", "none")
+     });
+
+    // Send to Mail Button
+    function composeMail(){
+      var email = "puskarniraula01@gmail.com";
+       email = encodeURIComponent(email);
+       let gmailURL = "https://mail.google.com/mail/?view=cm&to=" + email ;
+       window.open(gmailURL, "_blank");
+    }
+    </script>
+  </body>
 </html>
